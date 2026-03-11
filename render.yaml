@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: swill-server
+    runtime: node
+    repo: https://github.com/sanner1111/swill-server
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8080
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: node server.js
